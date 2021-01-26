@@ -12,7 +12,7 @@
     />
 
     <title>Frontend Mentor | Pod request access landing page</title>
-    <script src="app.js"></script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,17 +30,18 @@
         <img src="assets/desktop/google-podcasts.svg" alt="google" />
         <img src="assets/desktop/pocket-casts.svg" alt="pocket" />
       </section>
-      <form>
+      <form novalidate>
         <input
           type="email"
           name="email"
           id="email"
           placeholder="Email address"
         />
-        <p class="error" id="error"></p>
         <input type="submit" value="Request Access" id="submit" />
+        <p class="error" id="error"></p>
       </form>
     </main>
     <img src="assets/desktop/bg-pattern-dots.svg" alt="dots" class="dots" />
   </body>
+  <script src="app.js"></script>
 </html>

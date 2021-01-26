@@ -63,6 +63,12 @@ p {
   font-size: 14px;
   opacity: 0.5;
 }
+.error {
+  color: red;
+}
+.error .show {
+  display: block;
+}
 @media (min-width: 375px) {
   body {
     padding: 50px 15px;
@@ -102,6 +108,7 @@ p {
     background-color: var(--dark-blue);
     border-radius: 28px;
     border: 0px;
+    margin-bottom: 10px;
   }
   #submit {
     width: 100%;
@@ -193,10 +200,13 @@ p {
   }
   body::after {
     background-image: url(assets/desktop/image-host.jpg);
+    background-size: contain;
+
     top: 20%;
     right: 0%;
     opacity: 0.8;
   }
+
   .dots {
     right: 0;
     bottom: 13%;
