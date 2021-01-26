@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;900&display=swap");
-
+html {
+  position: relative;
+  height: 100vh;
+}
 html,
 body {
   margin: 0;
@@ -20,14 +23,15 @@ body {
   --very-light-blue: #c2cbe5;
 }
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* overflow-x: hidden; */
   font-family: "Chivo", sans-serif;
-  position: relative;
   background-color: var(--very-dark-blue);
+  /* border: solid 3px black; */
 }
-body::after {
+body::after,
+body::before {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -69,6 +73,9 @@ p {
 .error .show {
   display: block;
 }
+form input[type="email"] {
+  color: var(--very-light-blue);
+}
 @media (min-width: 375px) {
   body {
     padding: 50px 15px;
@@ -82,6 +89,7 @@ p {
     opacity: 0.1;
     background-size: contain;
   }
+
   main {
     width: 327px;
     height: 511px;
@@ -126,12 +134,20 @@ p {
 @media (min-width: 768px) {
   body {
     padding: 50px 15px;
+    height: 90vh;
+  }
+  body::before {
+    content: url(assets/desktop/bg-pattern-dots.svg);
+    left: 7%;
+    bottom: 1%;
+    z-index: 2;
   }
   body::after {
     left: 40%;
     background-image: url(assets/tablet/image-host.jpg);
     opacity: 1;
   }
+
   main {
     position: relative;
     width: 635px;
@@ -153,7 +169,7 @@ p {
     margin-left: 39px;
   }
   main p {
-    width: 75%;
+    width: 60%;
     text-align: left;
   }
   .container {
@@ -188,27 +204,50 @@ p {
   .dots {
     display: block;
     position: absolute;
+    left: 5%;
     bottom: 0%;
-    margin-left: 24px;
   }
 }
 @media (min-width: 1440px) {
   body {
     width: 1275px;
-    margin-left: 165px;
-    padding-right: 0;
+    height: 640px;
+    position: absolute;
+    right: 0;
+    margin-top: 130px;
+    padding: 0;
+    z-index: -1;
+  }
+  body::before {
+    content: url(assets/desktop/bg-pattern-dots.svg);
+    left: 80%;
+    bottom: 5%;
+    z-index: 2;
   }
   body::after {
     background-image: url(assets/desktop/image-host.jpg);
     background-size: contain;
-
-    top: 20%;
-    right: 0%;
+    right: 0;
     opacity: 0.8;
   }
 
-  .dots {
-    right: 0;
-    bottom: 13%;
+  .logo {
+    margin: -26px 0 0 0;
+    padding: 0;
+  }
+  main {
+    width: 723px;
+    height: 509px;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 88px 58px 0 0;
+  }
+  main p {
+    width: 421px;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
   }
 }
